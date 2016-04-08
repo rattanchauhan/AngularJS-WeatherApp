@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				{{ convertToDate({dt: weatherDay.dt}) | date: 'fullDate' }}
+			
+			</h3>
+		</div>
+	
+		<div class="panel-body">
+			<div class="table-responsive">
+			<table class="table">
+				<thead>
+				<tr class="active">
+					<th>Min Temp</th>
+					<th>Max Temp</th>
+					<th>Pressure</th>
+					<th>Humidity</th>
+					<th>Wind Speed</th>
+				</tr> 
+				</thead>
+				<tbody>
+				<tr>
+					<td>{{weatherDay.temp.min}}</td>
+					<td>{{weatherDay.temp.max}}</td>
+					<td>{{weatherDay.pressure}}</td>
+					<td>{{weatherDay.humidity + '%'}}</td>
+					<td>{{weatherDay.speed + ' m/s'}}</td>
+				</tr>
+				</tbody>
+			</table>
+			</div>	
+		</div>
+</div>
