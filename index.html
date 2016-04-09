@@ -3,14 +3,18 @@
 <head>
 	<title>AngularJS Weather Forecast SPA</title>
 	
-	<!-- load bootstrap and fontawesome via CDN -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- load bootstrap and fontawesome-->
+	<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
 	
 	
 	<!-- load angular -->
-	<script src="js/angular.min.js"></script>
-	<script src="js/angular-route.min.js" ></script>
-	<script src="js/angular-resource.min.js"></script>
+	<script src="lib/js/angular.min.js"></script>
+	<script src="lib/js/angular-route.min.js" ></script>
+	<script src="lib/js/angular-resource.min.js"></script>
+	
+	<!-- load app js -->	
 	<script src="js/app.js"></script>
 	<script src="js/routes.js"></script>
 	<script src="js/services.js"></script>
@@ -25,26 +29,42 @@
 	</style>
 	
 </head>
+	
 <body  class="full">
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#/">Weather Forecast</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#homeNavBar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Weather Forecast</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#/">Home</a></li>
-      <li><a href="#/about">About</a></li>
-      <li><a href="#/contact">Contact Us</a></li> 
-      <li><a href="#/tc">Terms & Conditions</a></li> 
-    </ul>
+    <div class="collapse navbar-collapse" id="homeNavBar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/">Home</a></li>
+        <li><a href="#/about">About</a></li>
+      	<li><a href="#/contact">Contact Us</a></li> 
+      	<li><a href="#/tc">Terms & Conditions</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-	<div class="container">
+<div class="container">
 	
-		<div ng-view></div>
+	<div ng-view></div>
 		
-	</div>
+</div>
+	<!-- Load bootstrap and jquery -->
+	<script src="lib/js/jquery-2.2.3.min.js"></script>
+	<script src="lib/js/bootstrap.min.js"></script>
 </body>
 
 </html>
