@@ -2,7 +2,7 @@
 <html lang="en" ng-app="weatherApp">
 <head>
 	<title>AngularJS Weather Forecast SPA</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- load bootstrap and fontawesome-->
 	<link rel="stylesheet" href="lib/css/bootstrap.min.css">
 	<link rel="stylesheet" href="lib/css/font-awesome.min.css">
@@ -69,18 +69,29 @@
 
 <!-- Nvbar bottom -->
 <footer class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="container">
-		<div class="nav navbar-nav navbar-right">
+    <div class="container-fluid">
+	<div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#homeNavBottom">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      
+    </div>
+	<div class="collapse navbar-collapse" id="homeNavBottom">
+	  <ul class="nav navbar-nav navbar-left">
 		  <li><a href="#/">&copy; 2016 - Rattan Chauhan</a></li>
-          <li><a href="http://www.openweathermap.org">All weather data provided by OpenWeatherMap</a></li>
-		</div>
-		
-	<div class="nav navbar-nav navbar-left">
           <li><a href="http://www.instagram.com/rattanc"><i class="fa fa-instagram"></i>&nbsp; Instagram</a></li>
           <li><a href="http://www.facebook.com/rattanchauhan"><i class="fa fa-facebook-official"></i>&nbsp; Facebook</a></li>
-          <li><a href="http://www.youtube.com/channel/UC95bi_ocEitRnfg0uVA0Ebw"><i class="fa fa-youtube"></i> &nbsp; YouTube</a></li>
-        
-		</div>
+          <li><a href="http://www.youtube.com/channel/UC95bi_ocEitRnfg0uVA0Ebw"><i class="fa fa-youtube"></i> &nbsp; YouTube</a></li> 
+	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.openweathermap.org">All weather data provided by OpenWeatherMap</a></li>
+      </ul>
+    </div>	
+		
+		
+	
       </div><!-- end Container -->
 </footer>	
 	
